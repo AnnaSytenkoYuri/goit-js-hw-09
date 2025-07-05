@@ -1,2 +1,2 @@
-import"./assets/modulepreload-polyfill-B5Qt9EMX.js";console.log("Form");
+import"./assets/modulepreload-polyfill-B5Qt9EMX.js";const t=document.querySelector(".feedback-form"),m="feedback-form-state";let e={email:"",message:""};const o=localStorage.getItem(m);o&&(e=JSON.parse(o),t.elements.email.value=e.email||"",t.elements.message.value=e.message||"");t.addEventListener("input",a=>{const{name:l,value:s}=a.target;e[l]=s,localStorage.setItem(m,JSON.stringify(e))});t.addEventListener("submit",a=>{a.preventDefault();const{email:l,message:s}=e;if(l.trim()===""||s.trim()===""){alert("Fill please all fields");return}console.log("Form Data:",e),localStorage.removeItem(m),e={email:"",message:""},t.reset()});
 //# sourceMappingURL=2-form.js.map
